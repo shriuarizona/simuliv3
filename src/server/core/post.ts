@@ -22,6 +22,6 @@ export const createPost = async () => {
       score: 0,
     },
     subredditName: subredditName,
-    title: 'simulife,
+    title: 'simulife',
   });
 };
