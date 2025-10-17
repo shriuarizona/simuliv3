@@ -1,20 +1,14 @@
 import { defineConfig } from 'vite';
-import tailwind from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwind()],
+  base: './',
+  plugins: [react()],
   build: {
     outDir: '../../dist/client',
-    sourcemap: true,
+    emptyOutDir: false,
     rollupOptions: {
-      output: {
-        entryFileNames: '[name].js',
-        chunkFileNames: '[name].js',
-        assetFileNames: '[name][extname]',
-        sourcemapFileNames: '[name].js.map',
-      },
+      input: './index.html',
     },
   },
 });
